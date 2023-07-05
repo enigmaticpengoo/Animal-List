@@ -1,18 +1,13 @@
-const ListGroup = () => {
-  const animalList = [
-    { animal: "Dog", class: "Mammal", image: "src/assets/dog.jpg" },
-    { animal: "Cat", class: "Demon", image: "src/assets/cat.jpg" },
-    { animal: "Mouse", class: "Mammal", image: "src/assets/mouse.jpg" },
-    { animal: "Bear", class: "Mammal", image: "src/assets/bear.jpg" },
-  ];
+import animalList from "./Animal-List-Data";
 
+const AnimalList = () => {
   return (
     <div className="container">
       <div className="row row-cols-3">
         {animalList.map((animalList) => (
           <div
             className="card"
-            style={{ width: "18rem" }}
+            style={{ width: "18rem", margin: "10px", padding: "0px" }}
             key={animalList.animal}
           >
             <img
@@ -34,13 +29,17 @@ const ListGroup = () => {
                     fill="red"
                     className="bi bi-heart"
                     viewBox="0 0 16 16"
+                    style={{}}
                   >
                     <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
                   </svg>
                 </div>
               </div>
               <div className="col">
-                <p className="card-text">Class: {animalList.class}</p>
+                <p className="card-text">
+                  Class: {animalList.class}
+                  <br></br>Genus: {animalList.genus}
+                </p>
               </div>
             </div>
           </div>
@@ -50,4 +49,4 @@ const ListGroup = () => {
   );
 };
 
-export default ListGroup;
+export default AnimalList;

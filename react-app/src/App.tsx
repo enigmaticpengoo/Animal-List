@@ -1,12 +1,12 @@
 import React from "react";
 import Counter from "./Counter/Counter";
-import ListGroup from "./List-Group";
+import AnimalList from "./Animal-List/Animal-List";
 
 const App = () => {
   return (
     <div>
       <Counter heading={"Counter"} />
-      <ListGroup />
+      <AnimalList />
     </div>
   );
 };
