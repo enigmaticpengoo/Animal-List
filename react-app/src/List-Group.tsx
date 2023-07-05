@@ -1,25 +1,34 @@
 const ListGroup = () => {
   const animalList = [
-    { animal: "Dog", species: "Mammal" },
-    { animal: "Cat", species: "Demon" },
+    { animal: "Dog", class: "Mammal", image: "src/assets/dog.jpg" },
+    { animal: "Cat", class: "Demon", image: "src/assets/cat.jpg" },
+    { animal: "Mouse", class: "Mammal", image: "src/assets/mouse.jpg" },
+    { animal: "Bear", class: "Mammal", image: "src/assets/bear.jpg" },
   ];
 
   return (
     <div className="container">
       <div className="row row-cols-3">
-        <div className="card" style={{ width: "18rem" }}>
-          <img src="..." className="card-img-top" alt="..." />
-          <div className="card-body">
-            <h5 className="card-title">Card Title</h5>
-            <p className="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" className="btn btn-primary">
-              Go somewhere
-            </a>
+        {animalList.map((animalList) => (
+          <div
+            className="card"
+            style={{ width: "18rem" }}
+            key={animalList.animal}
+          >
+            <img
+              src={animalList.image}
+              className="card-img-top img-fluid"
+              alt={animalList.animal}
+            />
+            <div className="card-body">
+              <h5 className="card-title">{animalList.animal}</h5>
+              <p className="card-text">Class: {animalList.class}</p>
+              <a href="#" className="btn btn-primary">
+                Go somewhere
+              </a>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );
