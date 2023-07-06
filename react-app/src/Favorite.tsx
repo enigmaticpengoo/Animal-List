@@ -19,7 +19,7 @@ const Favorite = () => {
       height="16"
       fill="red"
       className="bi bi-heart"
-      viewBox="0 0 16 16"
+      style={{ margin: "0px 0px 0px 35px" }}
     >
       <path d={favorite} />
     </svg>

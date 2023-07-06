@@ -26,7 +26,7 @@ const AnimalList = () => {
                   <Favorite />
                 </div>
               </div>
-              <div className="col">
+              <div className="row">
                 <p className="card-text">
                   Class: {animalList.class}
                   <br></br>Genus: {animalList.genus}
