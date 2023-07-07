@@ -5,7 +5,7 @@ import "./Animal-List.css";
 const AnimalList = () => {
   return (
     <div className="container">
-      <div className="row row-cols-3">
+      <div className="row row-cols-3 justify-content-center">
         {animalList.map((animalList) => (
           <div
             className="card highlight-img"
