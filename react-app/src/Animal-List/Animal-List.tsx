@@ -1,5 +1,6 @@
 import animalList from "./Animal-List-Data";
 import Favorite from "../Favorite";
+import "./Animal-List.css";
 
 const AnimalList = () => {
   return (
@@ -7,7 +8,7 @@ const AnimalList = () => {
       <div className="row row-cols-3">
         {animalList.map((animalList) => (
           <div
-            className="card"
+            className="card highlight-img"
             style={{ width: "18rem", margin: "10px", padding: "0px" }}
             key={animalList.animal}
           >

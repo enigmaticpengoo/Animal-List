@@ -2,7 +2,10 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-secondary">
+    <nav
+      className="navbar navbar-expand-lg bg-body-secondary"
+      style={{ height: "3em" }}
+    >
       <div className="container-fluid" style={{ margin: "0px 15px" }}>
         <a className="nav-item nav-link" href="#">
           <img
