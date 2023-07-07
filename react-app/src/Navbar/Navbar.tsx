@@ -2,24 +2,19 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <li className="nav-item">
-            <a className="nav-link active" href="#">
-              <img src="src/assets/house-fill.svg" />
-            </a>
-          </li>
-          <li className="nav-item dropdown">
-            <a
-              className="nav-link dropdown-toggle"
-              href="#"
+    <div className="container">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <div className="container-fluid">
+          <a className="navbar-brand">Navbar</a>
+          <div className="dropdown">
+            <div
+              className="dropdown-toggle"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Projects
-            </a>
+              Dropdown button
+            </div>
             <ul className="dropdown-menu">
               <li>
                 <a className="dropdown-item" href="#">
@@ -37,15 +32,11 @@ const Navbar = () => {
                 </a>
               </li>
             </ul>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              About
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+          </div>
+          <a className="nav-item nav-link">About</a>
+        </div>
+      </nav>
+    </div>
   );
 };
 
