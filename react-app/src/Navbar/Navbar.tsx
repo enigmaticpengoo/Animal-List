@@ -2,41 +2,47 @@ import styles from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
-    <div className="container">
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <a className="navbar-brand">Navbar</a>
-          <div className="dropdown">
-            <div
-              className="dropdown-toggle"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dropdown button
-            </div>
-            <ul className="dropdown-menu">
-              <li>
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Another action
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  Something else here
-                </a>
-              </li>
-            </ul>
+    <nav className="navbar navbar-expand-lg bg-body-secondary">
+      <div className="container-fluid" style={{ margin: "0px 15px" }}>
+        <a className="nav-item nav-link" href="#">
+          <img
+            src="src/assets/house-fill.svg"
+            alt="home"
+            style={{ height: "1.5em" }}
+          />
+        </a>
+        <div className="dropdown">
+          <div
+            className="dropdown-toggle"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Projects
           </div>
-          <a className="nav-item nav-link">About</a>
+          <ul className="dropdown-menu">
+            <li>
+              <a className="dropdown-item" href="#">
+                Project 1
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Project 2
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="#">
+                Project 3
+              </a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </div>
+        <a className="nav-item nav-link" href="#">
+          About
+        </a>
+      </div>
+    </nav>
   );
 };
 
