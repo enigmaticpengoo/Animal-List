@@ -1,6 +1,6 @@
 const Searchbar = () => {
   return (
-    <>
+    <div style={{ margin: "10px 80px" }}>
       <form className="d-flex" role="search">
         <input
           className="form-control me-2"
@@ -12,7 +12,7 @@ const Searchbar = () => {
           Search
         </button>
       </form>
-    </>
+    </div>
   );
 };
 
