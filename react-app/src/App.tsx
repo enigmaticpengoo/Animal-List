@@ -1,7 +1,7 @@
 import AnimalList from "./Animal-List/Animal-List";
 import Navbar from "./Navbar/Navbar";
-import Leftaside from "./Leftaside";
-import Rightaside from "./Rightaside";
+import Leftaside from "./Aside/Leftaside";
+import Rightaside from "./Aside/Rightaside";
 
 const App = () => {
   return (
