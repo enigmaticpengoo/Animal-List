@@ -1,5 +1,17 @@
 const Rightaside = () => {
-  return <div>Rightaside</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "50vh",
+        position: "fixed",
+      }}
+    >
+      Ads
+    </div>
+  );
 };
 
 export default Rightaside;

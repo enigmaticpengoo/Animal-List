@@ -11,7 +11,7 @@ const App = () => {
         <div className="col">
           <Leftaside />
         </div>
-        <div className="col" style={{ flex: "80%" }}>
+        <div className="col" style={{ flex: "60%" }}>
           <AnimalList />
         </div>
         <div className="col">
