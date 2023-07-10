@@ -3,10 +3,10 @@ import styles from "./Navbar.module.css";
 const Navbar = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg bg-body-secondary"
-      style={{ height: "3em" }}
+      className="navbar navbar-expand-lg bg-body-primary"
+      style={{ height: "3.5em", marginBottom: "5px" }}
     >
-      <div className="container-fluid" style={{ margin: "0px 15px" }}>
+      <div className="container-fluid" style={{ margin: "0px 45px" }}>
         <a className="nav-item nav-link" href="#">
           <img
             src="src/assets/house-fill.svg"
