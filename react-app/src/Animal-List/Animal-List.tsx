@@ -88,6 +88,27 @@ const AnimalList = () => {
           padding: "0px",
         }}
       ></div>
+      <div
+        style={{
+          width: "12rem",
+          margin: "10px auto",
+          padding: "0px",
+        }}
+      ></div>
+      <div
+        style={{
+          width: "12rem",
+          margin: "10px auto",
+          padding: "0px",
+        }}
+      ></div>
+      <div
+        style={{
+          width: "12rem",
+          margin: "10px auto",
+          padding: "0px",
+        }}
+      ></div>
     </div>
   );
 };
