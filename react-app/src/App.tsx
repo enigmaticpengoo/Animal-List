@@ -3,6 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import Leftaside from "./Aside/Leftaside";
 import Rightaside from "./Aside/Rightaside";
 import Searchbar from "./Searchbar";
+import Filter from "./Filter";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         </div>
         <div className="col" style={{ flex: "60%" }}>
           <Searchbar />
+          <Filter />
           <AnimalList />
         </div>
         <div className="col">
