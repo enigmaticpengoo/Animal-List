@@ -15,15 +15,23 @@ const AnimalList = () => {
           }}
           key={animalList.animal}
         >
-          <img
-            src={animalList.image}
-            className="card-img-top"
-            alt={animalList.animal}
-          />
+          <a href={animalList.link} target="_blank">
+            <img
+              src={animalList.image}
+              className="card-img-top"
+              alt={animalList.animal}
+            />
+          </a>
           <div className="card-body">
             <div className="row">
               <div className="col">
-                <h5 className="card-title">{animalList.animal}</h5>
+                <a
+                  href={animalList.link}
+                  target="_blank"
+                  style={{ textDecoration: "none", color: "currentColor" }}
+                >
+                  <h5 className="card-title">{animalList.animal}</h5>
+                </a>
               </div>
               <div className="col"></div>
               <div className="col">
