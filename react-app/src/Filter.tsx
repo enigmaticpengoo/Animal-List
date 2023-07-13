@@ -1,15 +1,32 @@
 import animalList from "./Animal-List/Animal-List-Data";
 
-const Filter = () => {
+interface props {
+  listProp: {
+    animal: string;
+    class: string;
+    genus: string;
+    image: string;
+    link: string;
+  }[];
+  filter: () => void;
+}
+
+const Filter = (prop: props) => {
   const filterSelect = () => {
+    const list = prop.listProp;
     const filterOne = (document.getElementById("filterOne") as HTMLInputElement)
       .value;
     console.log(filterOne);
     const filterTwo = (document.getElementById("filterTwo") as HTMLInputElement)
       .value;
     console.log(filterTwo);
-    const newArray = animalList.map((animalList) => animalList.animal).sort();
+    console.log(list);
+    const newArray = animalList;
+    newArray.sort((a, b) =>
+      a.animal > b.animal ? 1 : a.animal < b.animal ? -1 : 0
+    );
     console.log(newArray);
+    prop.filter;
   };
 
   return (

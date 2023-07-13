@@ -1,11 +1,24 @@
 import animalList from "./Animal-List-Data";
 import Favorite from "../Favorite";
 import "./Animal-List.css";
+import { useState } from "react";
 
-const AnimalList = () => {
+interface props {
+  listProp: {
+    animal: string;
+    class: string;
+    genus: string;
+    image: string;
+    link: string;
+  }[];
+}
+
+const AnimalList = (prop: props) => {
+  const list = prop.listProp;
+
   return (
     <div className="containter d-flex flex-wrap">
-      {animalList.map((animalList) => (
+      {list.map((list) => (
         <div
           className="card highlight-img"
           style={{
@@ -13,24 +26,20 @@ const AnimalList = () => {
             margin: "10px auto",
             padding: "0px",
           }}
-          key={animalList.animal}
+          key={list.animal}
         >
-          <a href={animalList.link} target="_blank">
-            <img
-              src={animalList.image}
-              className="card-img-top"
-              alt={animalList.animal}
-            />
+          <a href={list.link} target="_blank">
+            <img src={list.image} className="card-img-top" alt={list.animal} />
           </a>
           <div className="card-body">
             <div className="row">
               <div className="col">
                 <a
-                  href={animalList.link}
+                  href={list.link}
                   target="_blank"
                   style={{ textDecoration: "none", color: "currentColor" }}
                 >
-                  <h5 className="card-title">{animalList.animal}</h5>
+                  <h5 className="card-title">{list.animal}</h5>
                 </a>
               </div>
               <div className="col"></div>
@@ -40,8 +49,8 @@ const AnimalList = () => {
             </div>
             <div className="row">
               <p className="card-text">
-                Class: {animalList.class}
-                <br></br>Genus: {animalList.genus}
+                Class: {list.class}
+                <br></br>Genus: {list.genus}
               </p>
             </div>
           </div>

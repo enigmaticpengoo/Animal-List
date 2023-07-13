@@ -1,0 +1,4 @@
+.nofocus:focus {
+    box-shadow: none;
+    border-color:black;
+}

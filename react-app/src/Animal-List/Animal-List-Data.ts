@@ -1,4 +1,10 @@
-const animalList = [
+const animalList: {
+  animal: string;
+  class: string;
+  genus: string;
+  image: string;
+  link: string;
+}[] = [
     { animal: "Dog", class: "Mammal", genus:"Canis", image: "src/assets/dog.jpg", link:"https://www.en.wikipedia.org/wiki/Dog"  },
     { animal: "Cat", class: "Mammal", genus:"Felis", image: "src/assets/cat.jpg", link:"https://www.en.wikipedia.org/wiki/Cat"  },
     { animal: "Mouse", class: "Mammal", genus:"Mus", image: "src/assets/mouse.jpg", link:"https://www.en.wikipedia.org/wiki/Mouse"  },
