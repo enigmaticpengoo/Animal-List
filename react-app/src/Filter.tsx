@@ -1,34 +1,10 @@
 import animalList from "./Animal-List/Animal-List-Data";
 
-interface props {
-  listProp: {
-    animal: string;
-    class: string;
-    genus: string;
-    image: string;
-    link: string;
-  }[];
-  filter: () => void;
+interface filterProps {
+  onClick: () => void;
 }
 
-const Filter = (prop: props) => {
-  const filterSelect = () => {
-    const list = prop.listProp;
-    const filterOne = (document.getElementById("filterOne") as HTMLInputElement)
-      .value;
-    console.log(filterOne);
-    const filterTwo = (document.getElementById("filterTwo") as HTMLInputElement)
-      .value;
-    console.log(filterTwo);
-    console.log(list);
-    const newArray = animalList;
-    newArray.sort((a, b) =>
-      a.animal > b.animal ? 1 : a.animal < b.animal ? -1 : 0
-    );
-    console.log(newArray);
-    prop.filter;
-  };
-
+const Filter = ({ onClick }: filterProps) => {
   return (
     <div style={{ display: "flex", flexWrap: "nowrap" }}>
       <div style={{ margin: "10px 10px 10px 80px" }}>
@@ -51,7 +27,7 @@ const Filter = (prop: props) => {
         </select>
       </div>
       <button
-        onClick={filterSelect}
+        onClick={onClick}
         className="btn"
         style={{
           width: "4em",

@@ -1,21 +1,12 @@
-import animalList from "./Animal-List-Data";
 import Favorite from "../Favorite";
 import "./Animal-List.css";
-import { useState } from "react";
+import animalList from "./Animal-List-Data";
 
-interface props {
-  listProp: {
-    animal: string;
-    class: string;
-    genus: string;
-    image: string;
-    link: string;
-  }[];
+interface AnimalListProps {
+  list: typeof animalList;
 }
 
-const AnimalList = (prop: props) => {
-  const list = prop.listProp;
-
+const AnimalList = ({ list }: AnimalListProps) => {
   return (
     <div className="containter d-flex flex-wrap">
       {list.map((list) => (
