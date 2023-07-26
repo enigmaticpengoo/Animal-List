@@ -40,7 +40,7 @@ const AnimalList = ({ list }: AnimalListProps) => {
             </div>
             <div className="row">
               <p className="card-text">
-                Class: {list.class}
+                Class: {list.clas}
                 <br></br>Genus: {list.genus}
               </p>
             </div>

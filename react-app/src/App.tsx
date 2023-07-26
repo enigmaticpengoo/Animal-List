@@ -10,6 +10,8 @@ import { useState } from "react";
 const App = () => {
   const [list, setList] = useState(animalList);
 
+  let sorted = false;
+
   const filterSelect = () => {
     const filterOne = (document.getElementById("filterOne") as HTMLInputElement)
       .value;
@@ -27,11 +29,11 @@ const App = () => {
     if (filterTwo === "Class")
       if (filterOne === "Ascending")
         newArray.sort((a, b) =>
-          a.class > b.class ? 1 : a.class < b.class ? -1 : 0
+          a.clas > b.clas ? 1 : a.clas < b.clas ? -1 : 0
         );
       else
         newArray.sort((a, b) =>
-          a.class < b.class ? 1 : a.class > b.class ? -1 : 0
+          a.clas < b.clas ? 1 : a.clas > b.clas ? -1 : 0
         );
     else if (filterTwo === "Genus")
       if (filterOne === "Ascending")
@@ -43,6 +45,24 @@ const App = () => {
           a.genus < b.genus ? 1 : a.genus > b.genus ? -1 : 0
         );
     setList(newArray);
+    sorted = true;
+  };
+
+  const search = () => {
+    const searchInput = (document.getElementById("search") as HTMLInputElement)
+      .value;
+    const newArray = [...animalList];
+    let newerArray = [];
+    if (sorted === false)
+      newArray.sort((a, b) =>
+        a.animal > b.animal ? 1 : a.animal < b.animal ? -1 : 0
+      );
+    else return;
+    newerArray = newArray.filter((a) =>
+      a.animal.toLowerCase().startsWith(searchInput.toLowerCase())
+    );
+    sorted = true;
+    setList(newerArray);
   };
 
   return (
@@ -53,7 +73,7 @@ const App = () => {
           <Leftaside />
         </div>
         <div className="col" style={{ flex: "60%" }}>
-          <Searchbar />
+          <Searchbar onClick={search} />
           <Filter onClick={filterSelect} />
           <AnimalList list={list} />
         </div>

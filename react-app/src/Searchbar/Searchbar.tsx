@@ -1,29 +1,29 @@
 import "./Searchbar.css";
-import animalList from "../Animal-List/Animal-List-Data";
 
-const listMatch = (param: any) => {
-  animalList.animal.match(param);
-};
+interface SearchbarProps {
+  onClick: () => void;
+}
 
-const Searchbar = () => {
+const Searchbar = ({ onClick }: SearchbarProps) => {
   return (
     <div style={{ margin: "10px 80px" }}>
-      <form className="d-flex" role="search">
+      <div className="d-flex" role="search">
         <input
+          id="search"
           className="form-control me-2 nofocus"
           type="search"
           placeholder="Search"
           aria-label="Search"
         />
         <button
-          onClick={() => listMatch(document.querySelector("input")?.value)}
+          onClick={onClick}
           className="btn"
           type="submit"
           style={{ borderColor: "black" }}
         >
           Search
         </button>
-      </form>
+      </div>
     </div>
   );
 };
