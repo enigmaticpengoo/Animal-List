@@ -46,7 +46,6 @@ const App = () => {
         );
     setList(newArray);
     sorted = true;
-    console.log(newArray);
   };
 
   const search = () => {
